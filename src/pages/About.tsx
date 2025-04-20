@@ -2,8 +2,27 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Target, Lightbulb, Map, Compass } from "lucide-react";
 import "../styles/styles.css";
-import img3 from "../assets/img3.jpg";
-
+import education1 from '../assets/education1.jpg';
+import education2 from '../assets/education2.jpg';
+import education3 from '../assets/education3.jpg';
+import education4 from '../assets/education4.jpg';
+import empowerment1 from '../assets/empowerment1.png';
+import empowerment2 from '../assets/empowerment2.png';
+import empowerment3 from '../assets/empowerment3.png';
+import empowerment4 from '../assets/empowerment4.png';
+import health1 from '../assets/health1.jpg';
+import health2 from '../assets/health2.jpg';
+import health3 from '../assets/health3.jpeg';
+import healthworkshop1 from '../assets/healthworkshop1.png';
+import healthworkshop2 from '../assets/healthworkshop2.png';
+import sustain1 from '../assets/sustain1.jpg';
+import sustain2 from '../assets/sustain2.jpg';
+import homeImage1 from '../assets/homeImage1.png';
+import homeImage2 from '../assets/homeImage2.png';
+import homeImage3 from '../assets/homeImage3.png';
+import homeImage4 from '../assets/homeImage4.png';
+import homeImage5 from '../assets/homeImage5.png';
+import aboutus from '../assets/aboutus.png';
 const About = () => {
   return (
     <div>
@@ -12,7 +31,7 @@ const About = () => {
         className="relative h-[400px] bg-cover bg-center flex items-center"
         style={{
           backgroundImage:
-            'url("https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg")',
+          `url(${aboutus})`,
           backgroundBlendMode: "overlay",
           backgroundColor: "rgba(0, 0, 0, 0.5)",
         }}
@@ -29,272 +48,216 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-16">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h2 className="text-3xl font-bold mb-6 text-teal-600">
-                Our Vision
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                Holistic development of marginalized groups is our ultimate
-                goal. We strive to create a society where everyone has equal
-                opportunities. .
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h2 className="text-3xl font-bold mb-6 text-teal-600">
-                Our Mission
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                Advance social welfare, healthcare, and education. We aim to
-                promote gender equality and environmental sustainability. Our
-                mission is to empower those in need
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Objectives */}
-      <section className="py-16 bg-gray-50">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Core Objectives
+      <section className="py-12 px-4">
+    <div className="container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-teal-600">
+            Our Vision
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <Target className="w-12 h-12 text-teal-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Programs</h3>
-              <p className="text-gray-600">
-                Organize targeted programs for underprivileged children and
-                women. These initiatives provide essential resources and
-                support.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <Lightbulb className="w-12 h-12 text-teal-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Eradication</h3>
-              <p className="text-gray-600">
-                Eradicate hunger, poverty, and malnutrition through sustainable
-                solutions. We focus on long-term impact and empowerment
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <Compass className="w-12 h-12 text-teal-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Support</h3>
-              <p className="text-gray-600">
-                Support healthcare and welfare in rural and slum areas. Access
-                to healthcare is vital for community well-being
-              </p>
-            </div>
-          </div>
+          <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+            Holistic development of marginalized groups is our ultimate goal.
+            We strive to create a society where everyone has equal opportunities.
+          </p>
         </div>
-      </section>
-
-      {/* Key Focus Areas */}
-      <section className="py-16">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Key Focus Areas
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-teal-600">
+            Our Mission
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src={img3}
-                alt="Education"
-                className="w-full h-64 object-cover brightness-50" // <<< reduced brightness
-              />
-              <div className="absolute inset-0 flex items-center justify-center p-6">
-                <div className="border border-white p-6 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Education
-                  </h3>
-                  <p className="text-gray-800 font-bold text-sm">
-                    Education for disadvantaged youth, especially girls, is key.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg"
-                alt="Education"
-                className="w-full h-64 object-cover brightness-50" // <<< reduced brightness
-              />
-              <div className="absolute inset-0 flex items-center justify-center p-6">
-                <div className="border border-white p-6 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Healthcare
-                  </h3>
-                  <p className="text-gray-800 font-bold text-sm">
-                    Healthcare support and nutrition initiatives are essential.{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg"
-                alt="Education"
-                className="w-full h-64 object-cover brightness-50" // <<< reduced brightness
-              />
-              <div className="absolute inset-0 flex items-center justify-center p-6">
-                <div className="border border-white p-6 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Empowerment
-                  </h3>
-                  <p className="text-gray-800 font-bold text-sm">
-                    Gender equality and womens empowerment projects are
-                    crucial.{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg"
-                alt="Education"
-                className="w-full h-64 object-cover brightness-75" // <<< reduced brightness
-              />
-              <div className="absolute inset-0 flex items-center justify-center p-6">
-                <div className="border border-white p-6 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Sustainability
-                  </h3>
-                  <p className="text-gray-800 font-bold text-sm">
-                    Environmental sustainability efforts are a priority.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Repeat for others similarly */}
-          </div>
-        </div>
-      </section>
-
-      {/* Locations Served */}
-      <section className="py-16 bg-gray-50">
-  <div className="container">
-    <h2 className="text-3xl font-bold text-center mb-12">
-      Our Impact
-    </h2>
-
-    <div className="bg-white p-8 rounded-lg shadow-md">
-      <div className="flex flex-col md:flex-row items-center justify-around space-y-8 md:space-y-0">
-
-        {/* Step 1 */}
-        <div className="flex flex-col items-center text-center">
-          <div className="w-16 h-16 flex items-center justify-center rounded-full border-4 border-teal-600 text-teal-600 text-2xl font-bold mb-4">
-            1
-          </div>
-          <h3 className="text-xl font-semibold mb-2">Serving Haryana</h3>
-          <p className="text-gray-600 text-sm max-w-[200px]">
-            Serving communities in and around Haryana, India.
+          <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+            Advance social welfare, healthcare, and education. We aim to promote
+            gender equality and environmental sustainability. Our mission is to
+            empower those in need.
           </p>
         </div>
-
-        {/* Step 2 */}
-        <div className="flex flex-col items-center text-center">
-          <div className="w-16 h-16 flex items-center justify-center rounded-full border-4 border-teal-600 text-teal-600 text-2xl font-bold mb-4">
-            2
-          </div>
-          <h3 className="text-xl font-semibold mb-2">Collaborative</h3>
-          <p className="text-gray-600 text-sm max-w-[200px]">
-            Collaborative approach with local stakeholders.
-          </p>
-        </div>
-
-        {/* Step 3 */}
-        <div className="flex flex-col items-center text-center">
-          <div className="w-16 h-16 flex items-center justify-center rounded-full border-4 border-teal-600 text-teal-600 text-2xl font-bold mb-4">
-            3
-          </div>
-          <h3 className="text-xl font-semibold mb-2">Transparent</h3>
-          <p className="text-gray-600 text-sm max-w-[200px]">
-            Transparent, inclusive, and measurable metrics.
-          </p>
-        </div>
-
       </div>
     </div>
-  </div>
-</section>
-
-
-      {/* Future Perspectives */}
-      <section className="py-16">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Future Perspectives
-          </h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4">
-                  Expanding Our Reach
+  </section>
+      {/* Core Objectives */}
+      <section className="py-12 px-4 bg-gray-50">
+    <div className="container mx-auto">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+        Core Objectives
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {[
+          {
+            icon: <Target className="w-10 h-10 text-teal-600 mb-4" />,
+            title: "Programs",
+            desc:
+              "Organize targeted programs for underprivileged children and women. These initiatives provide essential resources and support.",
+          },
+          {
+            icon: <Lightbulb className="w-10 h-10 text-teal-600 mb-4" />,
+            title: "Eradication",
+            desc:
+              "Eradicate hunger, poverty, and malnutrition through sustainable solutions. We focus on long-term impact and empowerment.",
+          },
+          {
+            icon: <Compass className="w-10 h-10 text-teal-600 mb-4" />,
+            title: "Support",
+            desc:
+              "Support healthcare and welfare in rural and slum areas. Access to healthcare is vital for community well-being.",
+          },
+        ].map((obj, i) => (
+          <div key={i} className="bg-white p-6 rounded-lg shadow-md">
+            {obj.icon}
+            <h3 className="text-lg font-semibold mb-2">{obj.title}</h3>
+            <p className="text-gray-600 text-sm">{obj.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+      {/* Key Focus Areas */}
+      <section className="py-12 px-4">
+    <div className="container mx-auto">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+        Key Focus Areas
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          {
+            title: "Education",
+            desc: "Education for disadvantaged youth, especially girls, is key.",
+            img: education2,
+          },
+          {
+            title: "Healthcare",
+            desc: "Healthcare support and nutrition initiatives are essential.",
+            img: health2,
+          },
+          {
+            title: "Empowerment",
+            desc: "Gender equality and women's empowerment projects are crucial.",
+            img: empowerment4,
+          },
+          {
+            title: "Sustainability",
+            desc: "Environmental sustainability efforts are a priority.",
+            img: sustain2,
+          },
+        ].map((item, i) => (
+          <div key={i} className="relative overflow-hidden rounded-lg">
+            <img
+              src={item.img}
+              alt={item.title}
+              className="w-full h-64 object-cover brightness-50"
+            />
+            <div className="absolute inset-0 flex items-center justify-center p-4">
+              <div className="border border-white p-4 rounded-lg bg-white bg-opacity-50 backdrop-blur-sm text-center">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                  {item.title}
                 </h3>
-                <p className="text-gray-700">
-                  We aim to expand our presence to 50+ new locations in the next
-                  five years, bringing hope and opportunities to more
-                  communities in need.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-4">
-                  Innovation in Programs
-                </h3>
-                <p className="text-gray-700">
-                  Developing new programs that leverage technology and
-                  sustainable practices to create more effective solutions for
-                  community development.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-4">
-                  Partnerships for Impact
-                </h3>
-                <p className="text-gray-700">
-                  Building strategic partnerships with organizations and
-                  institutions to amplify our impact and reach more
-                  beneficiaries.
+                <p className="text-gray-800 text-sm font-medium">
+                  {item.desc}
                 </p>
               </div>
             </div>
           </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+      {/* Locations Served */}
+      <section className="py-12 px-4 bg-gray-50">
+    <div className="container mx-auto">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+        Our Impact
+      </h2>
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="flex flex-col md:flex-row justify-around items-center gap-8">
+          {[
+            {
+              title: "Serving Haryana",
+              desc: "Serving communities in and around Haryana, India.",
+            },
+            {
+              title: "Collaborative",
+              desc: "Collaborative approach with local stakeholders.",
+            },
+            {
+              title: "Transparent",
+              desc: "Transparent, inclusive, and measurable metrics.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col items-center text-center">
+              <div className="w-14 h-14 flex items-center justify-center rounded-full border-4 border-teal-600 text-teal-600 text-lg font-bold mb-3">
+                {i + 1}
+              </div>
+              <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+              <p className="text-gray-600 text-sm max-w-[200px]">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
+
+      {/* Future Perspectives */}
+      <section className="py-12 px-4">
+    <div className="container mx-auto">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+        Future Perspectives
+      </h2>
+      <div className="max-w-3xl mx-auto space-y-6">
+        <div>
+          <h3 className="text-xl font-semibold mb-2">Expanding Our Reach</h3>
+          <p className="text-gray-700 text-sm md:text-base">
+            We aim to expand our presence to 50+ new locations in the next five
+            years, bringing hope and opportunities to more communities in need.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-2">Innovation in Programs</h3>
+          <p className="text-gray-700 text-sm md:text-base">
+            Developing new programs that leverage technology and sustainable
+            practices to create more effective solutions for community
+            development.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-2">
+            Partnerships for Impact
+          </h3>
+          <p className="text-gray-700 text-sm md:text-base">
+            Building strategic partnerships with organizations and institutions
+            to amplify our impact and reach more beneficiaries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-teal-600 text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Join Us in Making a Difference
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Together, we can create lasting positive change in communities
-            across the world.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Link
-              to="/donate"
-              className="btn bg-white text-teal-600 hover:bg-gray-100"
-            >
-              Donate Now
-            </Link>
-            <Link
-              to="/contact"
-              className="btn btn-outline border-white text-white hover:bg-white hover:text-teal-600"
-            >
-              Get Involved
-            </Link>
-          </div>
-        </div>
-      </section>
+      <section className="py-12 px-4 bg-teal-600 text-white text-center">
+    <div className="container mx-auto">
+      <h2 className="text-2xl md:text-3xl font-bold mb-4">
+        Join Us in Making a Difference
+      </h2>
+      <p className="text-lg max-w-xl mx-auto mb-6">
+        Together, we can create lasting positive change in communities across
+        the world.
+      </p>
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <Link
+          to="/donate"
+          className="btn bg-white text-teal-600 hover:bg-gray-100 px-6 py-2 rounded"
+        >
+          Donate Now
+        </Link>
+        <Link
+          to="/contact"
+          className="btn border border-white text-white hover:bg-white hover:text-teal-600 px-6 py-2 rounded"
+        >
+          Get Involved
+        </Link>
+      </div>
+    </div>
+  </section>
     </div>
   );
 };

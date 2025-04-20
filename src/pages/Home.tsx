@@ -1,133 +1,146 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Heart, Users, Target, Globe } from 'lucide-react';
+import education1 from '../assets/education1.jpg';
+import education2 from '../assets/education2.jpg';
+import education3 from '../assets/education3.jpg';
+import education4 from '../assets/education4.jpg';
+import empowerment1 from '../assets/empowerment1.png';
+import empowerment2 from '../assets/empowerment2.png';
+import empowerment3 from '../assets/empowerment3.png';
+import empowerment4 from '../assets/empowerment4.png';
+import health1 from '../assets/health1.jpg';
+import health2 from '../assets/health2.jpg';
+import health3 from '../assets/health3.jpeg';
+import healthworkshop1 from '../assets/healthworkshop1.png';
+import healthworkshop2 from '../assets/healthworkshop2.png';
+import sustain1 from '../assets/sustain1.jpg';
+import sustain2 from '../assets/sustain2.jpg';
+import homeImage1 from '../assets/homeImage1.png';
+import homeImage2 from '../assets/homeImage2.png';
+import homeImage3 from '../assets/homeImage3.png';
+import homeImage4 from '../assets/homeImage4.png';
+import homeImage5 from '../assets/homeImage5.png';
+import aboutus from '../assets/aboutus.png';
+
 
 const Home = () => {
   return (
-    <div>
-  {/* Hero Section */}
-  <section
-    className="relative h-[600px] bg-cover bg-center flex items-center"
-    style={{
-      backgroundImage: 'url("https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg")',
-      backgroundBlendMode: 'overlay',
-      backgroundColor: 'rgba(0, 0, 0, 0.5)'
-    }}
-  >
-    <div className="container text-white px-4 md:px-0">
-      <h1 className="text-3xl md:text-5xl font-bold mb-6 max-w-2xl">
-        Empowering Communities, Transforming Lives
-      </h1>
-      <p className="text-lg md:text-xl mb-8 max-w-xl">
-        Join us in our mission to create lasting positive change through sustainable development and community empowerment.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Link to="/donate" className="btn btn-primary text-center">
-          Donate Now
-        </Link>
-        <Link to="/about" className="btn btn-outline border-white text-white hover:bg-white hover:text-gray-900 text-center">
-          Learn More
-        </Link>
-      </div>
-    </div>
-  </section>
-
-  {/* Impact Numbers */}
-  <section className="py-16 bg-gray-50">
-    <div className="container px-4 md:px-0">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-          <Heart className="w-12 h-12 text-teal-600 mx-auto mb-4" />
-          <h3 className="text-3xl md:text-4xl font-bold mb-2">10K+</h3>
-          <p className="text-gray-600">Lives Impacted</p>
-        </div>
-        <div>
-          <Users className="w-12 h-12 text-teal-600 mx-auto mb-4" />
-          <h3 className="text-3xl md:text-4xl font-bold mb-2">500+</h3>
-          <p className="text-gray-600">Volunteers</p>
-        </div>
-        <div>
-          <Target className="w-12 h-12 text-teal-600 mx-auto mb-4" />
-          <h3 className="text-3xl md:text-4xl font-bold mb-2">100+</h3>
-          <p className="text-gray-600">Projects Completed</p>
-        </div>
-        <div>
-          <Globe className="w-12 h-12 text-teal-600 mx-auto mb-4" />
-          <h3 className="text-3xl md:text-4xl font-bold mb-2">25+</h3>
-          <p className="text-gray-600">Communities Served</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* Featured Initiatives */}
-  <section className="py-16">
-    <div className="container px-4 md:px-0">
-      <h2 className="text-3xl font-bold text-center mb-12">Our Initiatives</h2>
-
-      <div className="flex flex-col md:flex-row items-center justify-between relative gap-12">
-        {/* Horizontal Line (visible only for md and up) */}
-        <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-teal-600"></div>
-
-        {/* Initiatives */}
-        {[1, 2, 3, 4].map((num, index) => (
-          <div key={index} className="flex flex-col items-center text-center md:w-1/4 px-4 relative">
-            <div className="flex items-center justify-center w-12 h-12 bg-white border-2 border-teal-600 rounded-full font-bold text-teal-600 text-lg mb-4 z-10">
-              {num}
-            </div>
-            {num === 1 && (
-              <>
-                <h3 className="text-xl font-semibold mb-2">Education for All</h3>
-                <p className="text-gray-600 mb-4">Providing quality education to underprivileged children.</p>
-              </>
-            )}
-            {num === 2 && (
-              <>
-                <h3 className="text-xl font-semibold mb-2">Healthcare Access</h3>
-                <p className="text-gray-600 mb-4">Making healthcare accessible to remote communities.</p>
-              </>
-            )}
-            {num === 3 && (
-              <>
-                <h3 className="text-xl font-semibold mb-2">Community Development</h3>
-                <p className="text-gray-600 mb-4">Building sustainable and resilient communities.</p>
-              </>
-            )}
-            {num === 4 && (
-              <>
-                <h3 className="text-xl font-semibold mb-2">Sustainability Awareness</h3>
-                <p className="text-gray-600 mb-4">Environmental sustainability and awareness campaigns.</p>
-              </>
-            )}
-            <Link
-              to="/about"
-              className="text-teal-600 font-medium flex items-center justify-center hover:text-teal-700"
-            >
-              Learn More <ArrowRight size={16} className="ml-2" />
+    <div className="px-0 sm:px-0 md:px-0"> {/* No padding on mobile or desktop */}
+      {/* Hero Section */}
+      <section
+        className="relative h-[500px] sm:h-[600px] bg-cover bg-center flex items-center justify-start rounded-none overflow-hidden"
+        style={{
+          backgroundImage: `url(${homeImage5})`,
+          backgroundBlendMode: 'overlay',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        }}
+      >
+        <div className="text-white w-full px-4 sm:px-6 lg:px-8">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+            Empowering Communities, Transforming Lives
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl mb-6">
+            Join us in our mission to create lasting positive change through sustainable development and community empowerment.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link to="/donate" className="btn btn-primary text-center">
+              Donate Now
+            </Link>
+            <Link to="/about" className="btn btn-outline border-white text-white hover:bg-white hover:text-gray-900 text-center">
+              Learn More
             </Link>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
+        </div>
+      </section>
 
-  {/* CTA Section */}
-  <section className="py-16 bg-teal-600 text-white">
-    <div className="container text-center px-4 md:px-0">
-      <h2 className="text-3xl font-bold mb-6">Make a Difference Today</h2>
-      <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-        Your support can help us continue our mission of empowering communities and transforming lives.
-      </p>
-      <Link
-        to="/donate"
-        className="btn bg-white text-teal-600 hover:bg-gray-100 inline-block"
-      >
-        Donate Now
-      </Link>
-    </div>
-  </section>
-</div>
+      {/* Impact Numbers */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+          <div>
+            <Heart className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600 mx-auto mb-3" />
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1">10K+</h3>
+            <p className="text-gray-600 text-sm sm:text-base">Lives Impacted</p>
+          </div>
+          <div>
+            <Users className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600 mx-auto mb-3" />
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1">500+</h3>
+            <p className="text-gray-600 text-sm sm:text-base">Volunteers</p>
+          </div>
+          <div>
+            <Target className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600 mx-auto mb-3" />
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1">100+</h3>
+            <p className="text-gray-600 text-sm sm:text-base">Projects Completed</p>
+          </div>
+          <div>
+            <Globe className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600 mx-auto mb-3" />
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1">25+</h3>
+            <p className="text-gray-600 text-sm sm:text-base">Communities Served</p>
+          </div>
+        </div>
+      </section>
 
+      {/* Featured Initiatives */}
+      <section className="py-12 sm:py-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">Our Initiatives</h2>
+
+        <div className="flex flex-col sm:flex-row items-center justify-between relative gap-10 sm:gap-12 w-full">
+          <div className="hidden sm:block absolute top-6 left-0 right-0 h-0.5 bg-teal-600"></div>
+
+          {[1, 2, 3, 4].map((num, index) => (
+            <div key={index} className="flex flex-col items-center text-center sm:w-1/4 px-2 relative w-full">
+              <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-white border-2 border-teal-600 rounded-full font-bold text-teal-600 text-lg mb-3 z-10">
+                {num}
+              </div>
+              {num === 1 && (
+                <>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-1">Education for All</h3>
+                  <p className="text-gray-600 text-sm sm:text-base mb-3">Providing quality education to underprivileged children.</p>
+                </>
+              )}
+              {num === 2 && (
+                <>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-1">Healthcare Access</h3>
+                  <p className="text-gray-600 text-sm sm:text-base mb-3">Making healthcare accessible to remote communities.</p>
+                </>
+              )}
+              {num === 3 && (
+                <>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-1">Community Development</h3>
+                  <p className="text-gray-600 text-sm sm:text-base mb-3">Building sustainable and resilient communities.</p>
+                </>
+              )}
+              {num === 4 && (
+                <>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-1">Sustainability Awareness</h3>
+                  <p className="text-gray-600 text-sm sm:text-base mb-3">Environmental sustainability and awareness campaigns.</p>
+                </>
+              )}
+              <Link
+                to="/about"
+                className="text-teal-600 text-sm sm:text-base font-medium flex items-center justify-center hover:text-teal-700"
+              >
+                Learn More <ArrowRight size={14} className="ml-1" />
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 sm:py-16 bg-teal-600 text-white text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Make a Difference Today</h2>
+        <p className="text-base sm:text-lg md:text-xl mb-8 max-w-xl mx-auto">
+          Your support can help us continue our mission of empowering communities and transforming lives.
+        </p>
+        <Link
+          to="/donate"
+          className="btn bg-white text-teal-600 hover:bg-gray-100 inline-block"
+        >
+          Donate Now
+        </Link>
+      </section>
+    </div>
   );
 };
 
