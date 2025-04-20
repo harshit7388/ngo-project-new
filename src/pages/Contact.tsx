@@ -1,14 +1,79 @@
-import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import React, { useState } from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
+  type FormDataType = {
+    name: string;
+    phone: string;
+    email: string;
+    message: string;
+  };
+  
+  type ErrorsType = Partial<Record<keyof FormDataType, string>>;
+
+ const [formData, setFormData] = useState<FormDataType>({
+  name: "",
+  phone: "",
+  email: "",
+  message: "",
+});
+const [errors, setErrors] = useState<ErrorsType>({});
+
+  // Handle input changes
+  const handleChange = (e:any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const validateForm = () => {
+    let newErrors: ErrorsType = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.phone.trim()) newErrors.phone = "Phone is required";
+    if (!formData.email.trim()) newErrors.email = "email is required";
+    if (!formData.message.trim()) newErrors.message = "Your message is required";
+    return newErrors;
+  };
+  const handleSubmit = async (e:any) => {
+    e.preventDefault();
+
+    // Validate form fields
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return; // Stop submission if errors exist
+    }
+    
+
+    const googleForms = "https://docs.google.com/forms/d/e/1FAIpQLSey7B7QiEklVYzkaq0xVmxFJHI-ZA8acgOML0384hMTgUbVKw/formResponse";
+    const formDataToSend = new FormData();
+    formDataToSend.append("entry.1434236807", formData.name);
+    formDataToSend.append("entry.874610018", formData.phone); 
+    formDataToSend.append("entry.1230226701", formData.email); 
+    formDataToSend.append("entry.882576067", formData.message); 
+
+    await fetch(googleForms, {
+      method: "POST",
+      body: formDataToSend,
+      mode: "no-cors",
+    });
+
+    // Reset form
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      message: "",        
+    });
+
+    setErrors({}); // Clear errors
+  };
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
           <p className="text-xl text-gray-600 mb-12">
-            We'd love to hear from you. Please reach out using any of the following methods.
+            We'd love to hear from you. Please reach out using any of the
+            following methods.
           </p>
         </div>
 
@@ -20,8 +85,11 @@ const Contact = () => {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
             <p className="text-gray-600">
-              <a href="mailto:contact@example.org" className="text-blue-600 hover:text-blue-800">
-              Kalyankekadamfoundation@gmail.com
+              <a
+                href="mailto:contact@example.org"
+                className="text-blue-600 hover:text-blue-800"
+              >
+                Kalyankekadamfoundation@gmail.com
               </a>
             </p>
           </div>
@@ -33,7 +101,10 @@ const Contact = () => {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
             <p className="text-gray-600">
-              <a href="tel:+1234567890" className="text-blue-600 hover:text-blue-800">
+              <a
+                href="tel:+1234567890"
+                className="text-blue-600 hover:text-blue-800"
+              >
                 +91 8178129395
               </a>
             </p>
@@ -44,64 +115,108 @@ const Contact = () => {
             <div className="flex justify-center mb-4">
               <MapPin className="h-12 w-12 text-blue-600" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Address
+            </h3>
             <p className="text-gray-600">
-              Haryana<br />
-             India<br />
-              
+              Haryana
+              <br />
+              India
+              <br />
             </p>
           </div>
         </div>
 
         {/* Contact Form */}
         <div className="mt-16 bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
-          <form className="space-y-6">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+            Send us a Message
+          </h2>
+          <p className="text-gray-600 mb-6">
+            We’d love to hear from you! Reach out for any inquiries.
+          </p>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
+                {errors.name && (
+                  <span className="text-red-500 text-sm">{errors.name}</span>
+                )}
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Phone
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Your Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
+                {errors.phone && (
+                  <span className="text-red-500 text-sm">{errors.phone}</span>
+                )}
               </div>
             </div>
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
-                Subject
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Email Id
               </label>
               <input
-                type="text"
-                id="subject"
-                name="subject"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Please enter your email"
+                value={formData.email}
+                onChange={handleChange}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               />
+              {errors.email && (
+                <span className="text-red-500 text-sm">{errors.email}</span>
+              )}
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               ></textarea>
+              {errors.message && (
+                <span className="text-red-500 text-sm">{errors.message}</span>
+              )}
             </div>
             <div>
               <button
@@ -110,6 +225,9 @@ const Contact = () => {
               >
                 Send Message
               </button>
+            </div>
+            <div className="text-center mt-4">
+              <small className="text-gray-400">Kalyankekadamfoundation</small>
             </div>
           </form>
         </div>
