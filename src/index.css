@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-800 leading-relaxed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  .btn-primary {
+    @apply bg-teal-600 text-white hover:bg-teal-700;
+  }
+  .btn-outline {
+    @apply border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white;
+  }
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
