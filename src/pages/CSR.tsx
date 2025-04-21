@@ -67,7 +67,7 @@ const CSR = () => {
         }}
       >
         <div className="container text-white">
-          <h1 className="text-5xl font-bold mb-4">CSR Initiatives</h1>
+          <h1 className="text-5xl font-bold mb-4 csrheading">CSR Initiatives</h1>
           <p className="text-xl max-w-2xl">
             Partner with us to create meaningful impact through corporate social
             responsibility.

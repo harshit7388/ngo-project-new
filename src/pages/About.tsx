@@ -37,10 +37,13 @@ const About = () => {
         }}
       >
         <div className="container text-white ">
-          <h1 className="text-5xl font-bold mb-4">About Us</h1>
+          <h1 className="text-5xl font-bold mb-4 aboutpageheading">About Us</h1>
           <p className="text-xl max-w-2xl">
             Kalyan Ke Kadam Foundation is dedicated to uplifting underprivileged
-            communities. Registered in Gurgaon, Haryana, the foundation focuses
+            communities. 
+            <br />
+            <br />
+            Registered in Gurgaon, Haryana, the foundation focuses
             on children and women. They strive to provide social welfare and
             healthcare support.
           </p>
@@ -64,7 +67,7 @@ const About = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-teal-600">
             Our Mission
           </h2>
-          <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+          <p className="text-gray-700 leading-relaxed text-sm md:text-base ">
             Advance social welfare, healthcare, and education. We aim to promote
             gender equality and environmental sustainability. Our mission is to
             empower those in need.

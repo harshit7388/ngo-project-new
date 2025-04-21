@@ -29,7 +29,7 @@ const Home = () => {
     <div className="px-0 sm:px-0 md:px-0"> {/* No padding on mobile or desktop */}
       {/* Hero Section */}
       <section
-        className="relative h-[500px] sm:h-[600px] bg-cover bg-center flex items-center justify-start rounded-none overflow-hidden"
+        className="relative w-full h-[500px] sm:h-[600px] bg-center bg-cover flex items-center justify-start rounded-none overflow-hidden"
         style={{
           backgroundImage: `url(${homeImage5})`,
           backgroundBlendMode: 'overlay',
@@ -38,7 +38,7 @@ const Home = () => {
       >
         <div className="text-white w-full px-4 sm:px-6 lg:px-8">
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-            Empowering Communities, Transforming Lives
+           <span className='homepageheading'>Empowering Communities, Transforming Lives</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl mb-6">
             Join us in our mission to create lasting positive change through sustainable development and community empowerment.
