@@ -1,27 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { Target, Lightbulb, Map, Compass } from "lucide-react";
+import { Target, Lightbulb, Compass } from "lucide-react";
 import "../styles/styles.css";
-import education1 from '../assets/education1.jpg';
 import education2 from '../assets/education2.jpg';
-import education3 from '../assets/education3.jpg';
-import education4 from '../assets/education4.jpg';
-import empowerment1 from '../assets/empowerment1.png';
-import empowerment2 from '../assets/empowerment2.png';
-import empowerment3 from '../assets/empowerment3.png';
 import empowerment4 from '../assets/empowerment4.png';
-import health1 from '../assets/health1.jpg';
 import health2 from '../assets/health2.jpg';
-import health3 from '../assets/health3.jpeg';
-import healthworkshop1 from '../assets/healthworkshop1.png';
-import healthworkshop2 from '../assets/healthworkshop2.png';
-import sustain1 from '../assets/sustain1.jpg';
 import sustain2 from '../assets/sustain2.jpg';
-import homeImage1 from '../assets/homeImage1.png';
-import homeImage2 from '../assets/homeImage2.png';
-import homeImage3 from '../assets/homeImage3.png';
-import homeImage4 from '../assets/homeImage4.png';
-import homeImage5 from '../assets/homeImage5.png';
 import aboutus from '../assets/aboutus.png';
 const About = () => {
   return (

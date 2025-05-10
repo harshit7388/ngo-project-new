@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Hope Foundation</h3>
+            <h3 className="text-xl font-bold mb-4">Kalyan Ke Kadam Foundation</h3>
             <p className="text-gray-400 mb-4">Making a difference in people's lives through sustainable development and community empowerment.</p>
           </div>
           
@@ -19,6 +19,9 @@ const Footer = () => {
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
               <li><Link to="/csr" className="text-gray-400 hover:text-white transition-colors">CSR Initiatives</Link></li>
               <li><Link to="/donate" className="text-gray-400 hover:text-white transition-colors">Ways to Donate</Link></li>
+              <li><Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors">Terms & Conditions</Link></li>
+              <li><Link to="/cancellation-and-refund-policy" className="text-gray-400 hover:text-white transition-colors">Cancellation & Refund Policy</Link></li>
             </ul>
           </div>
           

@@ -7,6 +7,9 @@ import Contact from './pages/Contact';
 import CSR from './pages/CSR';
 import Donate from './pages/Donate';
 import BoardOfTrustees from './pages/BoardOfTrustees';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
+import CancellationRefundPolicy from './pages/CancellationAndRefundPolicy';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Route path="/csr" element={<CSR />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/board-of-trustees" element={<BoardOfTrustees />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/cancellation-and-refund-policy" element={<CancellationRefundPolicy />} />
         </Routes>
       </Layout>
     </Router>

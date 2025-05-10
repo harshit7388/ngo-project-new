@@ -1,5 +1,4 @@
-import React from 'react';
-
+import bg2 from '../assets/bg2.jpg';
 const trustees = [
   {
     name: "Dr. Sarah Johnson",
@@ -7,36 +6,36 @@ const trustees = [
     image: "https://images.pexels.com/photos/5393594/pexels-photo-5393594.jpeg",
     bio: "Dr. Johnson brings 20+ years of experience in international development and healthcare management."
   },
-  {
-    name: "Michael Chen",
-    position: "Vice Chairperson",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
-    bio: "A veteran in corporate social responsibility with expertise in sustainable development."
-  },
-  {
-    name: "Dr. Emily Rodriguez",
-    position: "Secretary",
-    image: "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg",
-    bio: "Education specialist with focus on developing innovative learning programs."
-  },
-  {
-    name: "James Wilson",
-    position: "Treasurer",
-    image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
-    bio: "Financial expert with extensive experience in nonprofit management."
-  },
-  {
-    name: "Dr. Aisha Patel",
-    position: "Board Member",
-    image: "https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg",
-    bio: "Healthcare professional specializing in rural healthcare initiatives."
-  },
-  {
-    name: "Robert Thompson",
-    position: "Board Member",
-    image: "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg",
-    bio: "Technology entrepreneur focused on digital solutions for social impact."
-  }
+  // {
+  //   name: "Michael Chen",
+  //   position: "Vice Chairperson",
+  //   image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+  //   bio: "A veteran in corporate social responsibility with expertise in sustainable development."
+  // },
+  // {
+  //   name: "Dr. Emily Rodriguez",
+  //   position: "Secretary",
+  //   image: "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg",
+  //   bio: "Education specialist with focus on developing innovative learning programs."
+  // },
+  // {
+  //   name: "James Wilson",
+  //   position: "Treasurer",
+  //   image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+  //   bio: "Financial expert with extensive experience in nonprofit management."
+  // },
+  // {
+  //   name: "Dr. Aisha Patel",
+  //   position: "Board Member",
+  //   image: "https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg",
+  //   bio: "Healthcare professional specializing in rural healthcare initiatives."
+  // },
+  // {
+  //   name: "Robert Thompson",
+  //   position: "Board Member",
+  //   image: "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg",
+  //   bio: "Technology entrepreneur focused on digital solutions for social impact."
+  // }
 ];
 
 const BoardOfTrustees = () => {
@@ -46,39 +45,36 @@ const BoardOfTrustees = () => {
       <section 
         className="relative h-[300px] bg-cover bg-center flex items-center"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg")',
+          backgroundImage: `url(${bg2})`,
           backgroundBlendMode: 'overlay',
           backgroundColor: 'rgba(0, 0, 0, 0.5)'
         }}
       >
         <div className="container text-white">
-          <h1 className="text-5xl font-bold mb-4">Board of Trustees</h1>
+          <h1 className="text-5xl font-bold mb-4 trusteesheading">Board of Trustees</h1>
           <p className="text-xl max-w-2xl">Meet the dedicated individuals guiding our mission and vision.</p>
         </div>
       </section>
 
       {/* Trustees Grid */}
-      <section className="py-16">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-8">
             {trustees.map((trustee, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img 
-                  src={trustee.image} 
-                  alt={trustee.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{trustee.name}</h3>
-                  <p className="text-teal-600 font-medium mb-4">{trustee.position}</p>
-                  <p className="text-gray-600">{trustee.bio}</p>
+              <div 
+                key={index} 
+                className="w-full sm:w-[320px] bg-gradient-to-br from-[#14B8A6] via-[#5b49ff] to-white text-white p-1 rounded-xl shadow-xl transform transition hover:scale-105"
+              >
+                <div className="bg-white text-gray-800 rounded-lg p-6 h-full">
+                  <h3 className="text-2xl font-bold mb-2">{trustee.name}</h3>
+                  <p className="text-indigo-600 font-semibold mb-3">{trustee.position}</p>
+                  <p className="text-gray-600 text-sm">{trustee.bio}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Mission Statement */}
       <section className="py-16 bg-gray-50">
         <div className="container text-center">

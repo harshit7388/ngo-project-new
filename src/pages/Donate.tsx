@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import { Heart } from 'lucide-react';
+import donatenow from '../assets/donatenow.jpg';
 
 // Declare Razorpay on window
 declare global {
@@ -23,7 +23,7 @@ const Donate = () => {
       <section 
         className="relative h-[400px] bg-cover bg-center flex items-center"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/6646921/pexels-photo-6646921.jpeg")',
+          backgroundImage: `url(${donatenow})`,
           backgroundBlendMode: 'overlay',
           backgroundColor: 'rgba(0, 0, 0, 0.5)'
         }}
