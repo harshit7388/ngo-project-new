@@ -44,7 +44,7 @@ const Header = () => {
 
         {/* Main Navigation */}
         <nav className="main-nav">
-          <Link to="/" className="logo">Kalyan Ke Kadam</Link>
+          <Link to="/" className="logo">Kalyan Ke Kadam Foundation</Link>
 
           <div className="hamburger" onClick={toggleMenu}>
             <Menu size={28} />

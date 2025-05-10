@@ -1,27 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { Target, Lightbulb, Map, Compass } from "lucide-react";
+import { Target, Lightbulb, Compass } from "lucide-react";
 import "../styles/styles.css";
-import education1 from '../assets/education1.jpg';
 import education2 from '../assets/education2.jpg';
-import education3 from '../assets/education3.jpg';
-import education4 from '../assets/education4.jpg';
-import empowerment1 from '../assets/empowerment1.png';
-import empowerment2 from '../assets/empowerment2.png';
-import empowerment3 from '../assets/empowerment3.png';
 import empowerment4 from '../assets/empowerment4.png';
-import health1 from '../assets/health1.jpg';
 import health2 from '../assets/health2.jpg';
-import health3 from '../assets/health3.jpeg';
-import healthworkshop1 from '../assets/healthworkshop1.png';
-import healthworkshop2 from '../assets/healthworkshop2.png';
-import sustain1 from '../assets/sustain1.jpg';
 import sustain2 from '../assets/sustain2.jpg';
-import homeImage1 from '../assets/homeImage1.png';
-import homeImage2 from '../assets/homeImage2.png';
-import homeImage3 from '../assets/homeImage3.png';
-import homeImage4 from '../assets/homeImage4.png';
-import homeImage5 from '../assets/homeImage5.png';
 import aboutus from '../assets/aboutus.png';
 const About = () => {
   return (
@@ -37,10 +20,13 @@ const About = () => {
         }}
       >
         <div className="container text-white ">
-          <h1 className="text-5xl font-bold mb-4">About Us</h1>
+          <h1 className="text-5xl font-bold mb-4 aboutpageheading">About Us</h1>
           <p className="text-xl max-w-2xl">
             Kalyan Ke Kadam Foundation is dedicated to uplifting underprivileged
-            communities. Registered in Gurgaon, Haryana, the foundation focuses
+            communities. 
+            <br />
+            <br />
+            Registered in Gurgaon, Haryana, the foundation focuses
             on children and women. They strive to provide social welfare and
             healthcare support.
           </p>
@@ -64,7 +50,7 @@ const About = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-teal-600">
             Our Mission
           </h2>
-          <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+          <p className="text-gray-700 leading-relaxed text-sm md:text-base ">
             Advance social welfare, healthcare, and education. We aim to promote
             gender equality and environmental sustainability. Our mission is to
             empower those in need.

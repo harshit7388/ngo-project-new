@@ -1,28 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Users, Target, ArrowRight } from "lucide-react";
 import education1 from '../assets/education1.jpg';
-import education2 from '../assets/education2.jpg';
-import education3 from '../assets/education3.jpg';
-import education4 from '../assets/education4.jpg';
 import empowerment1 from '../assets/empowerment1.png';
-import empowerment2 from '../assets/empowerment2.png';
-import empowerment3 from '../assets/empowerment3.png';
-import empowerment4 from '../assets/empowerment4.png';
-import health1 from '../assets/health1.jpg';
-import health2 from '../assets/health2.jpg';
-import health3 from '../assets/health3.jpeg';
 import health4 from '../assets/health4.png';
-import healthworkshop1 from '../assets/healthworkshop1.png';
-import healthworkshop2 from '../assets/healthworkshop2.png';
-import sustain1 from '../assets/sustain1.jpg';
-import sustain2 from '../assets/sustain2.jpg';
-import homeImage1 from '../assets/homeImage1.png';
-import homeImage2 from '../assets/homeImage2.png';
-import homeImage3 from '../assets/homeImage3.png';
-import homeImage4 from '../assets/homeImage4.png';
-import homeImage5 from '../assets/homeImage5.png';
-import aboutus from '../assets/aboutus.png';
+import csr2 from '../assets/csr2.jpg';
 
 const CSR = () => {
   const pastEvents = [
@@ -60,14 +41,13 @@ const CSR = () => {
       <section
         className="relative h-[400px] bg-cover bg-center flex items-center"
         style={{
-          backgroundImage:
-            'url("https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg")',
+          backgroundImage: `url(${csr2})`,
           backgroundBlendMode: "overlay",
           backgroundColor: "rgba(0, 0, 0, 0.5)",
         }}
       >
         <div className="container text-white">
-          <h1 className="text-5xl font-bold mb-4">CSR Initiatives</h1>
+          <h1 className="text-5xl font-bold mb-4 csrheading">CSR Initiatives</h1>
           <p className="text-xl max-w-2xl">
             Partner with us to create meaningful impact through corporate social
             responsibility.
