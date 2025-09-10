@@ -6,32 +6,52 @@ import empowerment4 from '../assets/empowerment4.png';
 import health2 from '../assets/health2.jpg';
 import sustain2 from '../assets/sustain2.jpg';
 import aboutus from '../assets/aboutus.png';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const images = [aboutus, education2, health2]; 
+
 const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="relative h-[400px] bg-cover bg-center flex items-center"
-        style={{
-          backgroundImage:
-          `url(${aboutus})`,
-          backgroundBlendMode: "overlay",
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-        }}
-      >
-        <div className="container text-white ">
-          <h1 className="text-5xl font-bold mb-4 aboutpageheading">About Us</h1>
-          <p className="text-xl max-w-2xl">
-            Kalyan Ke Kadam Foundation is dedicated to uplifting underprivileged
-            communities. 
-            <br />
-            <br />
-            Registered in Gurgaon, Haryana, the foundation focuses
-            on children and women. They strive to provide social welfare and
-            healthcare support.
-          </p>
+     <section className="relative h-[400px]">
+  <Slider
+    dots={true}
+    infinite={true}
+    speed={500}
+    autoplay={true}
+    autoplaySpeed={3000}
+    slidesToShow={1}
+    slidesToScroll={1}
+    arrows={false}
+  >
+    {images.map((img, i) => (
+      <div key={i}>
+        <div
+          className="h-[400px] bg-cover bg-center flex items-center"
+          style={{
+            backgroundImage: `url(${img})`,
+            backgroundBlendMode: "overlay",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+          }}
+        >
+          <div className="container text-white">
+            <h1 className="text-5xl font-bold mb-4 aboutpageheading">
+              About Us
+            </h1>
+            <p className="text-xl max-w-2xl">
+              Kalyan Ke Kadam Foundation is dedicated to uplifting underprivileged
+              communities. <br /> <br />
+              Registered in Gurgaon, Haryana, the foundation focuses on children and women.
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
+    ))}
+  </Slider>
+</section>
 
       {/* Vision & Mission */}
       <section className="py-12 px-4">
