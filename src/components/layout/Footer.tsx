@@ -17,11 +17,11 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
-              <li><Link to="/csr" className="text-gray-400 hover:text-white transition-colors">CSR Initiatives</Link></li>
+              {/* <li><Link to="/csr" className="text-gray-400 hover:text-white transition-colors">CSR Initiatives</Link></li> */}
               <li><Link to="/donate" className="text-gray-400 hover:text-white transition-colors">Ways to Donate</Link></li>
               <li><Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link to="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors">Terms & Conditions</Link></li>
-              <li><Link to="/cancellation-and-refund-policy" className="text-gray-400 hover:text-white transition-colors">Cancellation & Refund Policy</Link></li>
+              {/* <li><Link to="/cancellation-and-refund-policy" className="text-gray-400 hover:text-white transition-colors">Cancellation & Refund Policy</Link></li> */}
             </ul>
           </div>
           
