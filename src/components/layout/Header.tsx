@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
-import logo from "../../assets/logo.jpg";
+import logo from '../../assets/logo.png'
 import "../../styles/styles.css";
 
 const Header = () => {
@@ -47,20 +47,28 @@ const Header = () => {
               About Us
             </Link>
 
+            <Link
+              to="/impactstories"
+              className={isActive("/ImpactStories")}
+              onClick={toggleMenu}
+            >
+              Impact Stories
+            </Link>
+
             {/* Dropdown Example */}
             <div className="dropdown">
               <button className="nav-link dropdown-toggle">Our Work</button>
               <div className="dropdown-menu">
-                <Link to="/" onClick={toggleMenu}>
+                <Link to="/programs" onClick={toggleMenu}>
                   Programs
                 </Link>
-                <Link to="/" onClick={toggleMenu}>
+                <Link to="/reach" onClick={toggleMenu}>
                   Reach
                 </Link>
-                <Link to="/" onClick={toggleMenu}>
+                <Link to="/impact" onClick={toggleMenu}>
                   Impact
                 </Link>
-                <Link to="/" onClick={toggleMenu}>
+                <Link to="/partners" onClick={toggleMenu}>
                   Partners
                 </Link>
               </div>
@@ -81,22 +89,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="dropdown">
-              <button className="nav-link dropdown-toggle">
-                Impact Stories
-              </button>
-              <div className="dropdown-menu">
-                <Link to="/" onClick={toggleMenu}>
-                  Stories of Change
-                </Link>
-                <Link to="/" onClick={toggleMenu}>
-                  Testimonials{" "}
-                </Link>
-                <Link to="/" onClick={toggleMenu}>
-                  Partners Speak
-                </Link>
-              </div>
-            </div>
+            
 
             <div className="dropdown">
               <button className="nav-link dropdown-toggle">Media</button>

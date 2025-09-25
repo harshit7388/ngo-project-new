@@ -68,7 +68,7 @@ const Home = () => {
       </section>
 
       {/* Impact Numbers */}
-      <section className="py-12 sm:py-16 bg-gray-50">
+      {/* <section className="py-12 sm:py-16 bg-gray-50">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
           <div>
             <Heart className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600 mx-auto mb-3" />
@@ -103,7 +103,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Featured Initiatives */}
       <section className="py-12 sm:py-16">
@@ -167,7 +167,8 @@ const Home = () => {
                     point 5
                   </h3>
                   <p className="text-gray-600 text-sm sm:text-base mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, architecto?.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quasi, architecto?.
                   </p>
                 </>
               )}
@@ -177,7 +178,8 @@ const Home = () => {
                     point 6
                   </h3>
                   <p className="text-gray-600 text-sm sm:text-base mb-3">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, laudantium.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    In, laudantium.
                   </p>
                 </>
               )}
@@ -193,7 +195,128 @@ const Home = () => {
         </div>
       </section>
 
-{/* Image Section (Below Initiatives) */}
+      {/* Our Journey Section */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12">
+            Our Journey
+          </h2>
+
+          {/* Intro Description */}
+          <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-sm sm:text-base leading-relaxed">
+            What began as a grassroots initiative in Gurgaon, Haryana, has grown
+            into a PAN-India movement. From distributing ration kits during
+            crises to providing educational opportunities in schools, health
+            equipment to rural hospitals, and sustainable livelihood support,
+            <b>Kalyan Ke Kadam Foundation</b> has touched thousands of families across multiple states of
+            India. Our journey is one of compassion in action—where small steps
+            taken together have created lasting change.
+          </p>
+
+          {/* Timeline */}
+          <div className="relative border-l-4 border-teal-600 pl-6">
+            {[
+              {
+                year: "2015 – The First Step",
+                points: [
+                  "Foundation registered in Gurgaon, Haryana.",
+                  "Began with small-scale community welfare initiatives for underprivileged children and women.",
+                  "Early focus: basic education support, nutrition, and healthcare awareness.",
+                ],
+              },
+              {
+                year: "2017 – Expanding Horizons",
+                points: [
+                  "Launched literacy clubs and after-school sessions to improve learning outcomes.",
+                  "Organized the first health check-up camps for rural and slum communities.",
+                  "Started women’s skill-building workshops, planting seeds of empowerment.",
+                ],
+              },
+              {
+                year: "2019 – Building Stronger Communities",
+                points: [
+                  "Expanded reach to villages across Haryana and NCR region.",
+                  "Introduced nutrition drives to tackle hunger and malnutrition.",
+                  "Formed partnerships with schools and local stakeholders, ensuring community ownership.",
+                ],
+              },
+              {
+                year: "2020 – Crisis Response During COVID-19",
+                points: [
+                  "Stepped up during the pandemic with large-scale ration kit distribution programs, reaching thousands of families.",
+                  "Provided medical aid and protective equipment to frontline workers and rural hospitals.",
+                  "Built a reputation for rapid, transparent, and impactful relief work.",
+                ],
+              },
+              {
+                year: "2021 – Scaling Beyond Haryana",
+                points: [
+                  "Extended operations PAN-India, focusing on hunger relief, education, and healthcare.",
+                  "Partnered with hospitals in rural Uttar Pradesh, Rajasthan, and Bihar to provide critical health equipment.",
+                  "Aligned programs with Sustainable Development Goals (SDGs) for global accountability.",
+                ],
+              },
+              {
+                year: "2023 – Strengthening Impact",
+                points: [
+                  "School education programs scaled to support hundreds of children with digital and classroom resources.",
+                  "Vocational training initiatives expanded, empowering more women toward financial independence.",
+                  "Began environmental sustainability campaigns, promoting eco-friendly practices in rural areas.",
+                ],
+              },
+              {
+                year: "2025 – Today & Beyond",
+                points: [
+                  "A PAN-India foundation serving communities in multiple states.",
+                  "Focused on holistic development: hunger eradication, healthcare access, education, women’s empowerment, and sustainability.",
+                  "Looking ahead to impact millions more lives, strengthen strategic partnerships, and build resilient, self-reliant communities for generations to come.",
+                ],
+              },
+            ].map((milestone, i) => (
+              <div key={i} className="mb-10 ml-4">
+                {/* Circle Indicator */}
+                <div className="absolute -left-3.5 w-7 h-7 bg-teal-600 rounded-full border-4 border-white"></div>
+
+                {/* Year */}
+                <h3 className="text-xl sm:text-2xl font-semibold text-teal-600 mb-2">
+                  {milestone.year}
+                </h3>
+
+                {/* Bullet Points */}
+                <ul className="list-disc pl-5 text-gray-700 text-sm sm:text-base leading-relaxed">
+                  {milestone.points.map((p, idx) => (
+                    <li key={idx}>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Team Section */}
+      <section className="py-16 sm:py-20 bg-gradient-to-r from-teal-50 via-white to-teal-50">
+        <div className="max-w-5xl mx-auto text-center px-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-black relative inline-block">
+            Our Team
+            <span className="absolute left-1/2 -bottom-2 transform -translate-x-1/2 w-16 h-1 bg-teal-600 rounded-full"></span>
+          </h2>
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+            Our team of{" "}
+            <span className="font-semibold text-teal-600">
+              volunteers, educators, healthcare workers, field coordinators,
+            </span>{" "}
+            and{" "}
+            <span className="font-semibold text-teal-600">
+              social activists
+            </span>
+            bring passion and dedication to every initiative. United by one
+            purpose—<span className="italic">empowering lives</span>—they are
+            the driving force behind our nationwide programs.
+          </p>
+        </div>
+      </section>
+
+      {/* Image Section (Below Initiatives) */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
           Our Reach
@@ -202,9 +325,7 @@ const Home = () => {
           <img
             src={map}
             alt="Our NGO Reach"
-      className="rounded-2xl shadow-lg max-w-2xl w-full sm:w-3/4 md:w-2/3 lg:w-1/2"
-
-
+            className="rounded-2xl shadow-lg max-w-2xl w-full sm:w-3/4 md:w-2/3 lg:w-1/2"
           />
         </div>
       </section>
